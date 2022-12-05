@@ -3,6 +3,6 @@ namespace P15_Drinks
 {
     public class DrinksService
     {
-
+        public void DrinksService() { }
     }
 }

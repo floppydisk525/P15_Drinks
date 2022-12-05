@@ -8,6 +8,7 @@ namespace P15_Drinks
     {
         static void Main()
         {
+            //Console.WriteLine("Hello, World!");
             UserInput userInput = new();
 
         }
