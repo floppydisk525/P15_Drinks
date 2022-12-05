@@ -8,9 +8,14 @@ namespace P15_Drinks
 {
     public class Validator
     {
-        internal static bool IsStringValid(string? category)
+        internal static bool IsStringValid(string stringInput)
         {
-            throw new NotImplementedException();
+            if(String.IsNullOrEmpty(stringInput)) return false;
+            foreach (char c in stringInput)
+            {
+                if(!Char.IsLetter(c) && c != '/' && c != ' ') return false;
+            }
+            return true;
         }
     }
 }

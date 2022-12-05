@@ -13,7 +13,8 @@ namespace P15_Drinks
 
             while(!Validator.IsStringValid(category))
             {
-
+                Console.WriteLine("\nInvalid Category");
+                category= Console.ReadLine();
             }
         }
     }
