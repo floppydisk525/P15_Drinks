@@ -10,7 +10,7 @@ namespace P15_Drinks
         {
             //Console.WriteLine("Hello, World!");
             UserInput userInput = new();
-
+            userInput.GetCategoriesInput();
         }
     }
 }
