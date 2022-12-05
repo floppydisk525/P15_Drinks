@@ -37,10 +37,11 @@ namespace P15_Drinks
                 string rawResponse = response.Result.Content;
                 var serialize = JsonConvert.DeserializeObject<Drinks>(rawResponse);
 
-                List<Drink> returnedList = serialize.CategoriesList;
+                List<Drink> returnedList = serialize.DrinksList;
 
                 Console.Clear();
                 TableVisualizationEngine.ShowTable(returnedList, "Drinks Menu");
             }
+        }
     }
 }
