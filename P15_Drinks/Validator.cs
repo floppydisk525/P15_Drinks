@@ -8,5 +8,9 @@ namespace P15_Drinks
 {
     public class Validator
     {
+        internal static bool IsStringValid(string? category)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -8,6 +8,13 @@ namespace P15_Drinks
         internal void GetCategoriesInput()
         {
             drinksService.GetCategories();
+            Console.WriteLine("Choose Category:");
+            string category = Console.ReadLine();
+
+            while(!Validator.IsStringValid(category))
+            {
+
+            }
         }
     }
 }
