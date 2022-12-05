@@ -16,6 +16,14 @@ namespace P15_Drinks
                 Console.WriteLine("\nInvalid Category");
                 category= Console.ReadLine();
             }
+
+            GetDrinksInput(category);
+
+        }
+
+        private void GetDrinksInput(string category)
+        {
+            drinksService.GetDrinksByCategory(category);
         }
     }
 }
