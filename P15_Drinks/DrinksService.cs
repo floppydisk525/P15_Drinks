@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Newtonsoft.Json;
+using P15_Drinks.Models;
 using RestSharp;
 
 namespace P15_Drinks
