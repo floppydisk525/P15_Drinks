@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using P15_Drinks.Models;
 using RestSharp;
+using System.Reflection;
 using System.Web;
 
 namespace P15_Drinks
@@ -55,9 +56,20 @@ namespace P15_Drinks
 
                 List<object> prepList = new();
 
-                string fomrattedName = "";
+                string formattedName = "";
 
-                //13:06 comeback to it.  
+                foreach (PropertyInfo prop in drinkDetail.GetType().GetProperties())
+                {
+                    if(prop.Name.Contains("str")) formattedName= prop.Name.Substring(3);
+                    if(!string.IsNullOrEmpty(prop.GetValue(drinkDetail)?.ToString()) )
+                    {
+                        prepList.Add(new
+                        {
+                            Key = formattedName,
+                            Value = prop.GetValue(drinkDetail)
+                        });
+                    }
+                }  
 
 
 
