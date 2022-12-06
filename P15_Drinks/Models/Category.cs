@@ -15,5 +15,4 @@ namespace P15_Drinks.Models
         [JsonProperty("drinks")]
         public List<Category> CategoriesList { get; set; }
     }
-
 }
