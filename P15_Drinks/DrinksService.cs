@@ -47,9 +47,19 @@ namespace P15_Drinks
             if (response.Result.StatusCode == System.Net.HttpStatusCode.OK)
             {
                 string rawResponse = response.Result.Content;
-                var serialize = JsonConvert.DeserializeObject<Drinks>(rawResponse);
+                var serialize = JsonConvert.DeserializeObject<DrinkDetailObject>(rawResponse);
 
-                List<Drink> returnedList = serialize.DrinksList;
+                List<DrinkDetail> returnedList = serialize.DrinkDetailList;
+
+                DrinkDetail drinkDetail = returnedList[0];
+
+                List<object> prepList = new();
+
+                string fomrattedName = "";
+
+                //13:06 comeback to it.  
+
+
 
                 Console.Clear();
                 TableVisualizationEngine.ShowTable(returnedList, "Drinks Menu");
