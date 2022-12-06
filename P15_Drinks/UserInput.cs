@@ -16,7 +16,7 @@ namespace P15_Drinks
                 Console.WriteLine("\nInvalid Category");
                 category= Console.ReadLine();
             }
-            if (!categories.Any(x => x.strCategory == category))
+            if (!categories.Any(x => x.strCategory == category))   //linq to check if a category entered matches the list (whoa!!!)
             {
                 Console.WriteLine("Category doesn't exist.");
                 GetCategoriesInput();
@@ -37,7 +37,7 @@ namespace P15_Drinks
                 Console.WriteLine("\nInvalid Drink");
                 drink = Console.ReadLine();
             }
-            if (!drinks.Any(x => x.idDrink == drink))
+            if (!drinks.Any(x => x.idDrink == drink))   //linq to check if a drink entered matches the list (whoa!!!)
             {
                 Console.WriteLine("Drink doesn't exist.");
                 GetDrinksInput(category);
