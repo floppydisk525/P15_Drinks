@@ -26,6 +26,18 @@ namespace P15_Drinks
             }
         }
 
+        internal void GetDrink(string drink)
+        {
+            var client = new RestClient("https://www.thecocktaildb.com/api/json/v1/1/");
+            var request = new RestRequest($"lookup.php?i={drink}");
+            var response = client.ExecuteAsync(request);
+
+            if (response.Result.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+
+            }
+        }
+
         internal void GetDrinksByCategory(string category)
         {
             var client = new RestClient("https://www.thecocktaildb.com/api/json/v1/1/");

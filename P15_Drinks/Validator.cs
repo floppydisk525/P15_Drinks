@@ -17,5 +17,16 @@ namespace P15_Drinks
             }
             return true;
         }
+
+        public static bool IsIdValid(string stringInput)
+        {
+            if(string.IsNullOrEmpty(stringInput)) return false;
+
+            foreach(char c in stringInput)
+            {
+                if(!Char.IsDigit(c)) return false;
+            }
+            return true;
+        }
     }
 }

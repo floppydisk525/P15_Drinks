@@ -18,12 +18,22 @@ namespace P15_Drinks
             }
 
             GetDrinksInput(category);
-
         }
 
         private void GetDrinksInput(string category)
         {
             drinksService.GetDrinksByCategory(category);
+            Console.WriteLine("Choose a drink or go back to catagory menu by typing 0:");
+            string drink = Console.ReadLine();
+
+            if (drink == "0") GetCategoriesInput();
+
+            while (!Validator.IsIdValid(drink))
+            {
+                Console.WriteLine("\nInvalid Drink");
+                drink = Console.ReadLine();
+            }
+            drinksService.GetDrink(drink);
         }
     }
 }
