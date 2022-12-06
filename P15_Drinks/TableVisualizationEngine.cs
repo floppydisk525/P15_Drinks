@@ -19,10 +19,17 @@ namespace P15_Drinks
 
             Console.WriteLine("\n\n");
 
+            //   from the old programs. Pablo did new version below. 
+            //ConsoleTableBuilder
+            //    .From(tableData)
+            //    .WithTitle(tableName)
+            //    .ExportAndWriteLine();
+            //Console.WriteLine("\n\n");
             ConsoleTableBuilder
                 .From(tableData)
-                .WithTitle(tableName)
-                .ExportAndWriteLine();
+                .WithColumn(tableName)
+                .WithFormat(ConsoleTableBuilderFormat.Alternative)
+                .ExportAndWriteLine(TableAligntment.Center);
             Console.WriteLine("\n\n");
         }
     }
